@@ -2,15 +2,16 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
+
+const categories = ["Home", "About Me", "Side Projects", "Reflexions"]
+
 function App() {
 	return (
 		<div className="App">
 			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<p>
-					Welcome to my page, where I'll be exposing my projects and probably a
-					bit about myself :)
-				</p>
+				{categories.map((name: string) => (
+					<div className="Category">{name}</div>
+				))}
 			</header>
 		</div>
 	);
