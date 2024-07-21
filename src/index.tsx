@@ -7,14 +7,39 @@ import {
 	createBrowserRouter,
 	RouterProvider,
   } from "react-router-dom";
+import ErrorPage from './error-page';
+import Biography from './Biography';
+import Projects from './Projects';
+import Cities from './Cities';
+import Music from './Music';
 
-const router = createBrowserRouter([
+const basePath = "/my-page"
+
+export const routes = [
 	{
-	  path: "/my-page",
-	  element: <App />
+	  path: basePath,
+	  element: <App />,
+    errorElement: <ErrorPage />,
 	},
-  ]);
+  {
+    path: basePath + "/bio",
+    element: <Biography />,
+  },
+  {
+    path: basePath + "/projects",
+    element: <Projects />,
+  },
+  {
+    path: basePath + "/cities",
+    element: <Cities />,
+  },
+  {
+    path: basePath + "/music",
+    element: <Music />,
+  },
+  ]
 
+const router = createBrowserRouter(routes);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
