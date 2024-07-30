@@ -1,0 +1,28 @@
+.Cities {
+    text-align: center;
+  }
+
+body {
+  width: 100vw;
+  background-color: #444445;
+  overflow: hidden;
+  margin: 0rem;
+}
+  
+  #image-track > .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+    opacity: 100%;
+  }
+
+  #image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    user-select: none; /* -- Prevent image highlighting -- */
+  }

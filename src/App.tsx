@@ -2,11 +2,12 @@ import React from "react";
 import logo from "./logo.svg";
 import { Link } from "react-router-dom";
 import "./App.css";
+import PersistentIcons from "./PersistentIcons";
 
 
 //"Reflexions",
 //submenus: side projects -> youtube, ball together etc; music -> reviews + taste
-const basePath = "/my-page"
+export const basePath = "/my-page"
 const categories = [
 	{
 		name: "Home",
@@ -17,7 +18,7 @@ const categories = [
 		link: basePath + "/bio"
 	},
 	{
-		name: "Side Projects",
+		name: "Projects",
 		link: basePath + "/projects"
 	},
 	{
@@ -33,6 +34,7 @@ function App() {
 	
 	return (
 		<div className="App">
+			<PersistentIcons/>
 			<header className="App-header">
 				{categories.map((item: {name: string, link: string}) => (
 					<div className="Category">
