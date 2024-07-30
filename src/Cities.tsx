@@ -31,7 +31,7 @@ const categories = ["Home", "About Me", "Side Projects",  "City Reviews", "Music
 // 	track.style.transform = `translate(${percentage}%, -50%)`;
 // }
 
-const track : any = document.getElementById("image-track")
+const track : any = document.getElementById("image-track");
 
 const handleOnDown = (e : any) => track.dataset.mouseDownAt = e.clientX;
 
