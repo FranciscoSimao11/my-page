@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./Biography.css";
 import PersistentIcons from "./PersistentIcons";
 

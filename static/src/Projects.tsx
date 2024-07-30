@@ -1,21 +1,21 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./Music.css";
+import "./Projects.css";
 import PersistentIcons from "./PersistentIcons";
 
 //"Reflexions",
 //submenus: side projects -> youtube, ball together etc; music -> reviews + taste
 const categories = ["Home", "About Me", "Side Projects",  "City Reviews", "Music"]
 
-function Music() {
+function Projects() {
 	return (
-		<div className="Music">
+		<div className="Projects">
 			<PersistentIcons/>
 			<header className="App-header">
-					<p>Music</p>
+					<p>Projects</p>
 				</header>
 		</div>
 	);
 }
 
-export default Music;
+
+export default Projects;
