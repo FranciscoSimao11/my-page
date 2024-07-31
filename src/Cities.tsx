@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Cities.css";
 import PersistentIcons from "./PersistentIcons";
 
@@ -30,7 +30,11 @@ const categories = ["Home", "About Me", "Side Projects",  "City Reviews", "Music
 // 	track.style.transform = `translate(${percentage}%, -50%)`;
 // }
 
-const track : any = document.getElementById("image-track");
+var track : HTMLElement | any;
+
+function assign(){
+  track = document.getElementById("image-track");
+}
 
 const handleOnDown = (e : any) => track.dataset.mouseDownAt = e.clientX;
 
@@ -78,6 +82,7 @@ window.ontouchmove = e => handleOnMove(e.touches[0]);
 
 
 function Cities() {
+  useEffect(() => {console.log("hahahahah");assign()})
 	return (
 		<div className="Cities">
 			<PersistentIcons/>
